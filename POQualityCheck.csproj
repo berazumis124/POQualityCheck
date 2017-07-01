@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="fn_addOrder.aspx" />
     <Content Include="fn_defects.aspx" />
     <Content Include="fn_supplier.aspx" />
     <Content Include="Web.config" />
@@ -131,6 +132,14 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelPackageExtensions.cs" />
+    <Compile Include="fn_addOrder.aspx.cs">
+      <DependentUpon>fn_addOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fn_addOrder.aspx.designer.cs">
+      <DependentUpon>fn_addOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="fn_defects.aspx.cs">
       <DependentUpon>fn_defects.aspx</DependentUpon>
