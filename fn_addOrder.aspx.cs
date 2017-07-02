@@ -16,6 +16,12 @@ namespace POQualityCheck
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!IsPostBack)
+            {
+                LoadDRBSupplier();
+            }
+
             if (IsPostBack && fu_upload.HasFile)
             {
                 if (Path.GetExtension(fu_upload.FileName).Equals(".xlsx"))
@@ -32,21 +38,14 @@ namespace POQualityCheck
                             using (SqlCommand cmd = new SqlCommand("sp_import_order"))
                             {
                                 cmd.CommandType = CommandType.StoredProcedure;
-                                cmd.Parameters.AddWithValue("@OrderNo", dr["orderNo"].ToString());
-                                cmd.Parameters.AddWithValue("@OrderQty", dr["orderQty"].ToString());
-                                cmd.Parameters.AddWithValue("@ShipmentDate", dr["shipmentDate"].ToString());
-                                cmd.Parameters.AddWithValue("@UnitOfMeasure", dr["unitOfMeasure"].ToString());
-                                cmd.Parameters.AddWithValue("@Customer", dr["customer"].ToString());
-                                cmd.Parameters.AddWithValue("@Spalva", dr["Spalva"].ToString());
-                                cmd.Parameters.AddWithValue("@Spyna", dr["Spyna"].ToString());
-                                cmd.Parameters.AddWithValue("@Vyris", dr["Vyris"].ToString());
-                                cmd.Parameters.AddWithValue("@Plotis", dr["Plotis"].ToString());
-                                cmd.Parameters.AddWithValue("@GaminioTipas", dr["Gaminio_Tipas"].ToString());
-                                cmd.Parameters.AddWithValue("@EXTRA1", dr["EXTRA_1"].ToString());
-                                cmd.Parameters.AddWithValue("@EXTRA2", dr["EXTRA_2"].ToString());
-                                cmd.Parameters.AddWithValue("@EXTRA3", dr["EXTRA_3"].ToString());
-                                cmd.Parameters.AddWithValue("@EXTRA4", dr["EXTRA_4"].ToString());
-                                cmd.Parameters.AddWithValue("@UserID", Session["UserID"].ToString());
+                                cmd.Parameters.AddWithValue("@ORDERNO", txt_orderNo.Text);
+                                cmd.Parameters.AddWithValue("@DATE", txt_date.Text);
+                                cmd.Parameters.AddWithValue("@SUPPLIER", drb_supplier.SelectedValue.ToString());
+                                cmd.Parameters.AddWithValue("@ITEMNO", dr["Item number"].ToString());
+                                cmd.Parameters.AddWithValue("@NAME", dr["Name"].ToString());
+                                cmd.Parameters.AddWithValue("@ORDERQTY", dr["Order qty"].ToString());
+                                cmd.Parameters.AddWithValue("@UM", dr["U/M"].ToString());
+                                cmd.Parameters.AddWithValue("@DESCRIPTION", dr["Description 2"].ToString());
                                 cmd.Connection = con;
                                 con.Open();
                                 SqlDataReader reader = cmd.ExecuteReader();
@@ -54,6 +53,31 @@ namespace POQualityCheck
                                 con.Close();
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        private void LoadDRBSupplier()
+        {
+            string constr = ConfigurationManager.ConnectionStrings["connDB"].ConnectionString;
+            DataTable dt_supplier = new DataTable();
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                try
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("SELECT ID, Name FROM TBL_SUPPLIER", con);
+                    sda.Fill(dt_supplier);
+                    drb_supplier.DataSource = dt_supplier;
+                    drb_supplier.DataValueField = "ID";
+                    drb_supplier.DataTextField = "Name";
+                    drb_supplier.DataBind();
+                }
+                finally
+                {
+                    if (con != null)
+                    {
+                        con.Close();
                     }
                 }
             }

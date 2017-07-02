@@ -31,7 +31,7 @@
             <asp:Label ID="lbl_file" runat="server" Text="Select file to upload: "></asp:Label>
         </div>
         <div>
-            <asp:FileUpload ID="fu_upload" runat="server" /><asp:Button ID="btn_upload" runat="server" Text="Upload" />
+            <asp:FileUpload ID="fu_upload" runat="server" />
         </div>
         <div>
             <asp:Button ID="btn_save" runat="server" Text="Save" />

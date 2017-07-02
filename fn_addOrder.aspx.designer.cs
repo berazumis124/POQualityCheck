@@ -94,15 +94,6 @@ namespace POQualityCheck {
         protected global::System.Web.UI.WebControls.FileUpload fu_upload;
         
         /// <summary>
-        /// btn_upload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_upload;
-        
-        /// <summary>
         /// btn_save control.
         /// </summary>
         /// <remarks>
