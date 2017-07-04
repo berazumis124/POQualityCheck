@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
     <div>Defect List</div>
@@ -22,10 +23,10 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="DefectName">
                     <ItemTemplate>
-                        <asp:Label ID="lbl_defect" runat="server" Text='<%# Eval("Defect") %>'></asp:Label>
+                        <asp:Label ID="lbl_defect" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt_defect" runat="server" Text='<%# Eval("defect") %>'></asp:TextBox>
+                        <asp:TextBox ID="txt_defect" runat="server" Text='<%# Eval("Name") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <FooterTemplate>
                         <asp:TextBox ID="txt_defect" runat="server"></asp:TextBox>
@@ -44,7 +45,7 @@
                 </asp:TemplateField>
                 <asp:TemplateField>
                     <FooterTemplate>
-                        <asp:Button ID="btn_Add" runat="server" Text="Add" OnClick="addDefect"/>
+                        <asp:Button ID="btn_Add" class="navbutton" runat="server" Text="Add" OnClick="addDefect"/>
                     </FooterTemplate>
                 </asp:TemplateField>
             </Columns>

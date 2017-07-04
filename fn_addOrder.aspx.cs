@@ -39,6 +39,7 @@ namespace POQualityCheck
                             {
                                 cmd.CommandType = CommandType.StoredProcedure;
                                 cmd.Parameters.AddWithValue("@ORDERNO", txt_orderNo.Text);
+                                cmd.Parameters.AddWithValue("@INVOICENO", txt_invoiceNo.Text);
                                 cmd.Parameters.AddWithValue("@DATE", txt_date.Text);
                                 cmd.Parameters.AddWithValue("@SUPPLIER", drb_supplier.SelectedValue.ToString());
                                 cmd.Parameters.AddWithValue("@ITEMNO", dr["Item number"].ToString());
@@ -81,6 +82,11 @@ namespace POQualityCheck
                     }
                 }
             }
+        }
+
+        protected void btn_getDate_Click(object sender, EventArgs e)
+        {
+            txt_date.Text = DateTime.Today.ToString().Substring(0,10);
         }
     }
 }

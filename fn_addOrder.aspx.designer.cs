@@ -40,6 +40,42 @@ namespace POQualityCheck {
         protected global::System.Web.UI.WebControls.TextBox txt_orderNo;
         
         /// <summary>
+        /// txt_orderNoValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator txt_orderNoValidator;
+        
+        /// <summary>
+        /// lbl_invoiceNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_invoiceNo;
+        
+        /// <summary>
+        /// txt_invoiceNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_invoiceNo;
+        
+        /// <summary>
+        /// txt_invoiceNoValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator txt_invoiceNoValidator;
+        
+        /// <summary>
         /// lbl_date control.
         /// </summary>
         /// <remarks>
@@ -56,6 +92,24 @@ namespace POQualityCheck {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_date;
+        
+        /// <summary>
+        /// btn_getDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_getDate;
+        
+        /// <summary>
+        /// txt_dateValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator txt_dateValidator;
         
         /// <summary>
         /// lbl_supplier control.

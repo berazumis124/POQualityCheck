@@ -122,7 +122,11 @@
     <Content Include="Default.aspx" />
     <Content Include="fn_addOrder.aspx" />
     <Content Include="fn_defects.aspx" />
+    <Content Include="fn_orderline.aspx" />
+    <Content Include="fn_process.aspx" />
+    <Content Include="fn_processQty.aspx" />
     <Content Include="fn_supplier.aspx" />
+    <Content Include="styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +151,27 @@
     </Compile>
     <Compile Include="fn_defects.aspx.designer.cs">
       <DependentUpon>fn_defects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fn_orderline.aspx.cs">
+      <DependentUpon>fn_orderline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fn_orderline.aspx.designer.cs">
+      <DependentUpon>fn_orderline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fn_process.aspx.cs">
+      <DependentUpon>fn_process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fn_process.aspx.designer.cs">
+      <DependentUpon>fn_process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fn_processQty.aspx.cs">
+      <DependentUpon>fn_processQty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fn_processQty.aspx.designer.cs">
+      <DependentUpon>fn_processQty.aspx</DependentUpon>
     </Compile>
     <Compile Include="fn_supplier.aspx.cs">
       <DependentUpon>fn_supplier.aspx</DependentUpon>

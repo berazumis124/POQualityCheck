@@ -10,7 +10,7 @@
 namespace POQualityCheck {
     
     
-    public partial class Default {
+    public partial class fn_orderline {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,21 @@ namespace POQualityCheck {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lbl_orderno control.
+        /// ph_orderlines control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_orderno;
+        protected global::System.Web.UI.WebControls.PlaceHolder ph_orderlines;
         
         /// <summary>
-        /// txt_orderno control.
+        /// btn_finish control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_orderno;
-        
-        /// <summary>
-        /// btn_orderlines control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_orderlines;
+        protected global::System.Web.UI.WebControls.Button btn_finish;
     }
 }

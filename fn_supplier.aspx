@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
     <div>Supplier List</div>
@@ -33,7 +34,7 @@
                 </asp:TemplateField>
                 <asp:TemplateField>
                     <FooterTemplate>
-                        <asp:Button ID="btn_add" runat="server" Text="Add" OnClick="addSupplier" />
+                        <asp:Button ID="btn_add" class="navbutton" runat="server" Text="Add" OnClick="addSupplier" />
                     </FooterTemplate>
                 </asp:TemplateField>
                 <asp:CommandField ShowEditButton="true" />

@@ -10,7 +10,7 @@
 namespace POQualityCheck {
     
     
-    public partial class Default {
+    public partial class fn_processZero {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,48 @@ namespace POQualityCheck {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lbl_orderno control.
+        /// ScriptManager2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_orderno;
+        protected global::System.Web.UI.ScriptManager ScriptManager2;
         
         /// <summary>
-        /// txt_orderno control.
+        /// ph_defButtons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_orderno;
+        protected global::System.Web.UI.WebControls.PlaceHolder ph_defButtons;
         
         /// <summary>
-        /// btn_orderlines control.
+        /// btn_back control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_orderlines;
+        protected global::System.Web.UI.WebControls.Button btn_back;
+        
+        /// <summary>
+        /// btn_next control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_next;
+        
+        /// <summary>
+        /// btn_finish control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_finish;
     }
 }

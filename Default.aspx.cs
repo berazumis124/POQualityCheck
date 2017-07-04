@@ -11,7 +11,15 @@ namespace POQualityCheck
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            txt_orderno.Focus();
+        }
 
+        protected void btn_orderlines_Click(object sender, EventArgs e)
+        {
+            if (txt_orderno.Text != "")
+            {
+                Response.Redirect("fn_orderline.aspx?id=" + txt_orderno.Text);
+            }
         }
     }
 }

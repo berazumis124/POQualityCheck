@@ -10,7 +10,7 @@
 namespace POQualityCheck {
     
     
-    public partial class Default {
+    public partial class fn_processQty {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,30 @@ namespace POQualityCheck {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lbl_orderno control.
+        /// lbl_qty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_orderno;
+        protected global::System.Web.UI.WebControls.Label lbl_qty;
         
         /// <summary>
-        /// txt_orderno control.
+        /// txt_qty control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_orderno;
+        protected global::System.Web.UI.WebControls.TextBox txt_qty;
         
         /// <summary>
-        /// btn_orderlines control.
+        /// btn_next control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_orderlines;
+        protected global::System.Web.UI.WebControls.Button btn_next;
     }
 }
