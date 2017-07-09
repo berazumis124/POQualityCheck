@@ -58,36 +58,54 @@ namespace POQualityCheck
             DataTable dt = getData(orderNo);
             StringBuilder html = new StringBuilder();
 
-            html.Append("<table class='table'>");
-            html.Append("<tr>");
+            //html.Append("<table class='table'>");
+            //html.Append("<tr>");
 
-            foreach (DataColumn column in dt.Columns)
-            {
-                html.Append("<th>");
-                html.Append(column.ColumnName);
-                html.Append("</th>");
-            }
-            html.Append("</tr>");
+            //foreach (DataColumn column in dt.Columns)
+            //{
+            //    html.Append("<th>");
+            //    html.Append(column.ColumnName);
+            //    html.Append("</th>");
+            //}
+            //html.Append("</tr>");
 
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    if (row["isChecked"].ToString() == "0")
+            //    {
+            //        html.Append("<tr class='notChecked'>");
+            //    } else
+            //    {
+            //        html.Append("<tr class='isChecked'>");
+            //    }
+                
+            //    foreach (DataColumn column in dt.Columns)
+            //    {
+            //        html.Append("<td><a href=fn_processQty.aspx?LID=" + row["ID"] + "&type=0>");
+            //        html.Append(row[column.ColumnName]);
+            //        html.Append("</a></td>");
+            //    }
+            //    html.Append("</tr>");
+            //}
+            //html.Append("</table>");
             foreach (DataRow row in dt.Rows)
             {
                 if (row["isChecked"].ToString() == "0")
                 {
-                    html.Append("<tr class='notChecked'>");
+                    html.Append("<a href=fn_processQty.aspx?LID=" + row["ID"] + "&type=0><div class='orderline_notChecked'>");
                 } else
                 {
-                    html.Append("<tr class='isChecked'>");
+                    html.Append("<a href=fn_processQty.aspx?LID=" + row["ID"] + "&type=0><div class='orderline_isChecked'>");
                 }
-                
-                foreach (DataColumn column in dt.Columns)
+
+                foreach (DataColumn column  in dt.Columns)
                 {
-                    html.Append("<td><a href=fn_processQty.aspx?LID=" + row["ID"] + "&type=0>");
+                    html.Append("<span class='orderlineelement'>");
                     html.Append(row[column.ColumnName]);
-                    html.Append("</a></td>");
+                    html.Append("</span>");
                 }
-                html.Append("</tr>");
+                html.Append("</div></a>");
             }
-            html.Append("</table>");
             ph_orderlines.Controls.Add(new Literal { Text = html.ToString() });
         }
 

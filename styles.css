@@ -1,9 +1,21 @@
-﻿ .isChecked {
+﻿.orderline_isChecked {
     background-color:darkseagreen;
+    border: 1px solid grey;
+    margin: 8px;
+    font-size:x-large;
+    padding: 4px;
 }
 
-.notChecked {
+.orderline_notChecked {
     background-color:lightgoldenrodyellow;
+    border: 1px solid grey;
+    margin: 10px;
+    font-size:x-large;
+    padding: 4px;
+}
+
+.orderlineelement {
+    padding: 15px;
 }
 
 .btn{
@@ -70,6 +82,9 @@
 
 a{
     text-decoration:none;
+}
+a:link {
+    color:darkslategrey;
 }
 
 a:active,a:visited {
